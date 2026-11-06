@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доска публикаций - Все REST API методы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Доска публикаций (REST API)</h1>
+
+        <!-- Область сообщений -->
+        <div id="message" class="message hidden"></div>
+
+        <!-- 1. GET: Загрузка публикаций (Требование лабы) -->
+        <section class="section method-get">
+            <h2>1. GET: Загрузить публикации</h2>
+            <!--button id="loadBtn" class="btn btn-get">Загрузить все публикации</button-->
+            <button id="loadBtn" class="btn btn-get">Загрузить 5 публикациq</button>
+        </section>
+
+        <!-- 2. GET: По ID -->
+        <section class="section method-get">
+            <h2>2. GET: Загрузить по ID</h2>
+            <input type="number" id="getByIdInput" placeholder="Введите ID (например, 1)" min="1">
+            <button id="getByIdBtn" class="btn btn-get">Найти по ID</button>
+        </section>
+
+        <!-- 3. POST: Создание (Требование лабы) -->
+        <section class="section method-post">
+            <h2>3. POST: Создать публикацию</h2>
+            <form id="postForm" class="form">
+                <input type="text" id="postTitle" placeholder="Заголовок" required>
+                <textarea id="postBody" rows="3" placeholder="Текст публикации" required></textarea>
+                <button type="submit" class="btn btn-post">Создать (POST)</button>
+            </form>
+        </section>
+
+        <!-- 4. PUT: Полное обновление -->
+        <section class="section method-put">
+            <h2>4. PUT: Полностью обновить</h2>
+            <form id="putForm" class="form">
+                <input type="number" id="putId" placeholder="ID публикации" min="1" required>
+                <input type="text" id="putTitle" placeholder="Новый заголовок" required>
+                <textarea id="putBody" rows="3" placeholder="Новый текст" required></textarea>
+                <button type="submit" class="btn btn-put">Обновить полностью (PUT)</button>
+            </form>
+        </section>
+
+        <!-- 5. PATCH: Частичное обновление -->
+        <section class="section method-patch">
+            <h2>5. PATCH: Частично обновить</h2>
+            <form id="patchForm" class="form">
+                <input type="number" id="patchId" placeholder="ID публикации" min="1" required>
+                <input type="text" id="patchTitle" placeholder="Только новый заголовок (опционально)">
+                <button type="submit" class="btn btn-patch">Обновить частично (PATCH)</button>
+            </form>
+        </section>
+
+        <!-- 6. DELETE: Удаление -->
+        <section class="section method-delete">
+            <h2>6. DELETE: Удалить публикацию</h2>
+            <input type="number" id="deleteIdInput" placeholder="ID для удаления" min="1">
+            <button id="deleteBtn" class="btn btn-delete">Удалить (DELETE)</button>
+        </section>
+
+        <!-- Область вывода результатов -->
+        <section class="section">
+            <h2>Результат выполнения</h2>
+            <div id="outputArea" class="output-area">
+                <p class="placeholder-text">Здесь появятся данные после выполнения запросов...</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

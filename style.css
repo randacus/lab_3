@@ -1,0 +1,100 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h1 { text-align: center; margin-bottom: 20px; color: #2c3e50; }
+h2 { margin-bottom: 15px; font-size: 1.2rem; }
+
+.section {
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 6px;
+    border-left: 5px solid #ccc;
+    background: #fafafa;
+}
+
+/* Цветовая кодировка методов */
+.method-get { border-left-color: #3498db; }
+.method-post { border-left-color: #2ecc71; }
+.method-put { border-left-color: #f39c12; }
+.method-patch { border-left-color: #9b59b6; }
+.method-delete { border-left-color: #e74c3c; }
+
+/* Кнопки и Инпуты */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    transition: opacity 0.2s;
+    margin-top: 10px;
+}
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.btn-get { background-color: #3498db; }
+.btn-post { background-color: #2ecc71; }
+.btn-put { background-color: #f39c12; }
+.btn-patch { background-color: #9b59b6; }
+.btn-delete { background-color: #e74c3c; }
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Сообщения */
+.message {
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+.message.hidden { display: none; }
+.message.loading { background-color: #d1ecf1; color: #0c5460; }
+.message.success { background-color: #d4edda; color: #155724; }
+.message.error { background-color: #f8d7da; color: #721c24; }
+
+/* Область вывода */
+.output-area {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 5px;
+    min-height: 100px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.post-card {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.post-card h3 { color: #2980b9; margin-bottom: 5px; font-size: 1rem; }
+.post-card p { color: #555; font-size: 0.9rem; }
+.placeholder-text { color: #999; text-align: center; font-style: italic; }
